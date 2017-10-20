@@ -6,6 +6,8 @@ html,body{
 
 .error { color: red; }
 
+.prevent {color: orange;}
+
 .login-container{
     position: relative;
     width: 300px;

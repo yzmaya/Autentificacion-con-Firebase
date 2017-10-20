@@ -20,6 +20,7 @@
   const btnSignUp = document.getElementById('btnSignUp');
 
   const error = document.getElementById('demo');
+  const prevencion = document.getElementById('demo2');
 
   // Añadir Evento login
   btnLogin.addEventListener('click', e => {
@@ -57,7 +58,7 @@
       console.log(firebaseUser.emailVerified);
 
 //var contador = 0;
-setInterval(function(){
+
  if(firebaseUser.emailVerified == true){
       alert("accediste a hgome html");
       window.location.href = "home.html";
@@ -69,11 +70,13 @@ setInterval(function(){
        firebaseUser.sendEmailVerification().then(function() {
           // Email sent.
           alert('se ha enviado una confirmación a tu correo electrónico');
+          error.innerHTML = "";
+          prevencion.innerHTML = "Una vez hayas verificado actualiza tu navegador web (F5)";
         }).catch(function(error) {
           // An error happened.
         });
     };
-}, 2000);
+
 
    
 
