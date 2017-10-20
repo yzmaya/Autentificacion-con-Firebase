@@ -51,22 +51,16 @@
   });
 
   
-  // Añadir un listener en tiempo real
+// Añadir un listener en tiempo real
    firebase.auth().onAuthStateChanged( firebaseUser => {
+//Si existe autenticación hacer.....
     if(firebaseUser) {
       console.log(firebaseUser);
-      console.log(firebaseUser.emailVerified);
-
-//var contador = 0;
-
+//Si ya comprobe por medio del correo de validación entonces .. ..
  if(firebaseUser.emailVerified == true){
-      alert("accediste a hgome html");
       window.location.href = "home.html";
-
-
-
     }else{
-
+//si ya te registraste pero no se ha comprobado tu dirección de correo entonces...
        firebaseUser.sendEmailVerification().then(function() {
           // Email sent.
           alert('se ha enviado una confirmación a tu correo electrónico');
@@ -75,15 +69,11 @@
         }).catch(function(error) {
           // An error happened.
         });
-    };
-
-
-   
-
-       
-        
+    };  
+  //aqui no se obtuvo un inicio de sesión  
     } else {
       console.log('no logueado');
+      console.log(firebaseUser.emailVerified);
     }    
   });
 } ());
