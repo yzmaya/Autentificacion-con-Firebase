@@ -4,6 +4,8 @@ html,body{
     height: 100%;
 }
 
+.error { color: red; }
+
 .login-container{
     position: relative;
     width: 300px;
@@ -26,7 +28,7 @@ html,body{
     background: rgb(25, 204, 25);
 }
 
-#output.alert-danger{
+.output.alert-danger{
     background: rgb(228, 105, 105);
 }
 

@@ -12,21 +12,8 @@
   firebase.initializeApp(config);
 
   // Obtener elementos
-  
   const btnLogout = document.getElementById('btnLogout');
 
-  // Añadir Evento login
-  //btnLogin.addEventListener('click', e => {
-    //Obtener email y pass
-    //const email = txtEmail.value;
-    //const pass = txtPassword.value;
-    //const auth = firebase.auth();
-    // Sign in
-    //const promise = auth.signInWithEmailAndPassword(email, pass);
-    //promise.catch(e => console.log(e.message));   
-  //});
-
-  // Añadir evento signup
 
 
   btnLogout.addEventListener('click', e => {
@@ -37,6 +24,8 @@
    firebase.auth().onAuthStateChanged( firebaseUser => {
     if(firebaseUser) {
       console.log(firebaseUser);
+
+      console.log(firebaseUser.emailVerified);   
       
     } else {
       console.log('no logueado');

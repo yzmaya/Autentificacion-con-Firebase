@@ -32,13 +32,14 @@
                   
     <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-      <input id="txtEmail" type="text" class="form-control" name="email" placeholder="Correo Electrónico">
+      <input id="txtEmail" type="text" class="form-control" name="email" placeholder="Correo Electrónico" required="">
     </div>
     <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-      <input id="txtPassword" type="password" class="form-control" name="password" placeholder="Contraseña">
+      <input id="txtPassword" type="password" class="form-control" name="password" placeholder="Contraseña" required="">
     </div>
     <br>
+       <p id="demo" class="error"></p>
     <div class="input-group">
       <button id="btnLogin" class="btn btn-success">Iniciar Sesión</button> 
       
@@ -71,6 +72,7 @@
             	<button type="button" class="btn btn-primary btn-block login" data-toggle="modal" data-target="#">Facebook</button>
 				<button type="button" class="btn btn-info btn-block login" data-toggle="modal" data-target="#myModal"> Correo Electrónico</button>
             </div>
+
         </div>
         
 </div>
